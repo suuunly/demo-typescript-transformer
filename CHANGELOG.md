@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2023-09-20)
+
+
+### Features
+
+* added adjusted payload data back in ([e600ae7](https://github.com/suuunly/demo-typescript-transformer/commit/e600ae7d6f89a5c8ce400c1388d561b3e80f5317))
+
 ## [1.3.0](https://github.com/flowcore-io/nodejs-typescript-transformer-example/compare/v1.2.0...v1.3.0) (2023-09-12)
 
 
