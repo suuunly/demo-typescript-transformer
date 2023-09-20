@@ -10,11 +10,30 @@ interface Input<T = any> {
   payload: T;
 }
 
-export default async function (input: Input) {
+interface PayloadData {
+  message: string;
+}
+
+function countUppercaseLetters(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= 'A' && str[i] <= 'Z') {
+      count++;
+    }
+  }
+  return count;
+}
+
+export default async function (input: Input<PayloadData>) {
   console.info(`Received event ${input.eventId}, with payload ${JSON.stringify(input.payload)} and valid time ${input.validTime}`);
+
+  const message = input.payload.message;
+
+
   return {
     eventId: input.eventId,
     validTime: input.validTime,
-    ...input.payload,
+    message,
+    upperCaseCount: countUppercaseLetters(message)
   };
 }
