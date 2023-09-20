@@ -7,7 +7,7 @@
       "eventId": ":uuid:",
       "validTime": ":date:",
       "message": "Hello World",
-      "upperCaseCount": "2"
+      "upperCaseCount": 2
     }
   },
   {
@@ -18,7 +18,7 @@
       "eventId": ":uuid:",
       "validTime": ":date:",
       "message": "Hello",
-      "upperCaseCount": "1"
+      "upperCaseCount": 1
     }
   }
 ]
