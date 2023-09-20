@@ -1,0 +1,24 @@
+[
+  {
+    "input": {
+      "hello": "world",
+      "bar": "baz"
+    },
+    "output": {
+      "eventId": ":uuid:",
+      "validTime": ":date:",
+      "hello": "world",
+      "bar": "baz"
+    }
+  },
+  {
+    "input": {
+      "foo": "bar"
+    },
+    "output": {
+      "eventId": ":uuid:",
+      "validTime": ":date:",
+      "foo": "bar"
+    }
+  }
+]
