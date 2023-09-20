@@ -1,24 +1,24 @@
 [
   {
     "input": {
-      "hello": "world",
-      "bar": "baz"
+      "message": "Hello World"
     },
     "output": {
       "eventId": ":uuid:",
       "validTime": ":date:",
-      "hello": "world",
-      "bar": "baz"
+      "message": "Hello World",
+      "upperCaseCount": "2"
     }
   },
   {
     "input": {
-      "foo": "bar"
+      "message": "Hello"
     },
     "output": {
       "eventId": ":uuid:",
       "validTime": ":date:",
-      "foo": "bar"
+      "message": "Hello",
+      "upperCaseCount": "1"
     }
   }
 ]
