@@ -10,30 +10,29 @@ interface Input<T = any> {
   payload: T;
 }
 
-interface PayloadData {
-  message: string;
-}
+// interface PayloadData {
+//   message: string;
+// }
 
-function countUppercaseLetters(str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] >= 'A' && str[i] <= 'Z') {
-      count++;
-    }
-  }
-  return count;
-}
+// function countUppercaseLetters(str:string) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] >= "A" && str[i] <= "Z") {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-export default async function (input: Input<PayloadData>) {
+export default async function (input: Input) {
   console.info(`Received event ${input.eventId}, with payload ${JSON.stringify(input.payload)} and valid time ${input.validTime}`);
 
-  const message = input.payload.message;
-
+  // const message = input.payload.message;
 
   return {
     eventId: input.eventId,
     validTime: input.validTime,
-    message,
-    upperCaseCount: countUppercaseLetters(message)
+    ...input.payload,
+    // upperCaseCount: countUppercaseLetters(message)
   };
 }
